@@ -8,13 +8,17 @@ const getGirlsBtn = document.getElementById('getGirls')
 const girlRoster = document.getElementById('displayGirls')
 
 const addForm = document.getElementById('addForm')
+
 const addInput = document.getElementById('addInput')
 
 const deleteForm = document.getElementById('deleteForm')
+
 const deleteInput = document.getElementById('deleteInput')
 
 const editForm = document.getElementById('editForm')
+
 const editIndex = document.getElementById('editIndex')
+
 const editInput = document.getElementById('editInput')
 
 // Step 2: Write Functions
@@ -36,8 +40,10 @@ const getGirls = () => {
 
         for (let i = 0; i < girls.length; i++) {
             let newGirls = document.createElement('li')
-            newGirls.textContent = girls[i]
-            girlRoster.appendChild(newGirls)
+            newGirls.textContent = 
+            girls[i]
+            girlsRoster.appendChild
+            (newGirls)
         }
     })
     .catch((err) => {
@@ -58,8 +64,8 @@ const addNewItem = (event) => {
         const girls = res.data
         girlRoster.innerHTML = ''
 
-        for (let i = 0; i < girls.length; i++) {
-    
+        for (let i = 0; i < girls.length; i++)
+        {
             let newGirls = document.createElement('li')
             newGirls.textContent = girls[i]
             girlRoster.appendChild(newGirls)
@@ -79,8 +85,8 @@ const deleteItem = (event) => {
         const girls = res.data
         girlRoster.innerHTML = ''
 
-        for (let i = 0; i < girls.length; i++) {
-        
+        for (let i = 0; i < girls.length; i++)
+        {
             let newGirls = document.createElement('li')
             newGirls.textContent = girls[i]
             girlRoster.appendChild(newGirls)
@@ -104,8 +110,10 @@ const editItem = (e) => {
 
         for(let i =0; i<girls.length; i++) {
             let newGirls = document.createElement('li')
-            newGirls.textContent = girls [i]
-            girlRoster.appendChild(newGirls)
+            newGirls.textContent = 
+            girls [i]
+            girlsRoster.appendChild
+            (newGirls)
         }
         editIndex.value = ''
         editInput.value = ''
@@ -121,4 +129,3 @@ getGirlsBtn.addEventListener('click', getGirls)
 addForm.addEventListener('submit', addNewItem)
 deleteForm.addEventListener('submit', deleteItem)
 editForm.addEventListener('submit', editItem)
-

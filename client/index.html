@@ -5,9 +5,31 @@
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
-    <button id="fortuneButton">Get a fortune</button>
-    <input type="text" id="complitment" placeholder="Give a compliment!">
-    <button id="submit">Submit</button>
+
+    <br></br>
+
+    <button id="getWeapons">Get a Girl!</button>
+
+    <p>Add Item</p>
+    <form id="addForm">
+<input type="text" placeholder="Add item" id="addInput"/>
+<button>Submit</button>
+    </form>
+
+    <p>Delete Item</p>
+    <form id="deleteForm">
+<input type="text" placeholder="Enter index to delete" id="deleteInput"/>
+<button>Submit</button>
+    </form>
+
+    <p>Edit Item</p>
+    <form id="editForm">
+<input type="text" placeholder="Enter index to edit" id="editIndex"/>
+<input type="text" placeholder="Enter new item" id="editInput"/>
+<button>Submit</button>
+    </form>
+
+    <div id="displayWeapons"></div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>

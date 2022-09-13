@@ -1,3 +1,5 @@
+const girls = ['bob', 'carl', 'tasha']
+
 module.exports = {
 
     getCompliment: (req, res) => {
@@ -9,16 +11,34 @@ module.exports = {
       
         res.status(200).send(randomCompliment);
     },
-    getFortune: (req, res) => {
-        const fortunes = ["A beautiful, smart, and loving person will be coming into your life!", "A dubious friend may be an enemy in camouflage.", "A faithful friend is a strong defense."];
     
-        let randomIndex = Math.floor(Math.random() * fortunes.length);
-        let randomFortune = fortunes[randomIndex];
-    
-        res.status(200).send(randomFortune);
+    getGirls: (req, res) => {
+        res.status(200).send(girls)
+    },
 
-},
+    addGirl: (req, res) => {
+        let {item} = req.body
+        girls.push(item)
 
-createButton: (req, res) => {
-    
+        res.status(200).send(girls)
+
+    },
+
+    deleteGirl: ( req, res) => {
+        let index = req.params.index
+        
+        girls.splice(index, 1)
+
+        res.status(200).send(girls)
+
+    },
+
+    editGirl: (req, res) => {
+        let index = req.params.index
+        let {item} = req.body
+
+        girls.splice(index, 1, item)
+
+        res.status(200).send(girls)
+    }
 }
