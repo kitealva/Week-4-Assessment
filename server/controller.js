@@ -34,7 +34,7 @@ module.exports = {
     },
 
     editGirl: (req, res) => {
-        let index = req.params.index
+        let index = req.params.id
         let {item} = req.body
 
         girls.splice(index, 1, item)

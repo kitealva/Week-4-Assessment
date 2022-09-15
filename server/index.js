@@ -11,8 +11,8 @@ const {getCompliment, getGirls, addGirl, deleteGirl, editGirl} = require('./cont
 
 app.get("/api/compliment", getCompliment)
 app.get("/api/girls", getGirls)
-app.get("/api/addGirl", addGirl)
-app.get("/api/deleteGirl/:id", deleteGirl)
-app.get("/api/editGirl/:id", editGirl)
+app.post("/api/addGirl", addGirl)
+app.delete("/api/deleteGirl/:id", deleteGirl)
+app.put("/api/editGirl/:id", editGirl)
 
 app.listen(4000, () => console.log("Server running on 4000"))

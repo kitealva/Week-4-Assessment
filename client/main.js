@@ -97,7 +97,7 @@ const editItem = (e) => {
         item: editInput.value
     }
 
-    axios.put(`${baseURL}/api/editGirls/${editIndex.value}`, bodyObj)
+    axios.put(`${baseURL}/api/editGirl/${editIndex.value}`, bodyObj)
     .then((res) => {
         const girls = res.data
         girlRoster.innerHTML = ''
